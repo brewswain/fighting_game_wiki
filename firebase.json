@@ -12,6 +12,30 @@
   "hosting": {
     "rewrites": [
       {
+        "source": "/bbtag",
+        "destination": "/bbtag/bbtag.html"
+      },
+      {
+        "source": "/dbfz",
+        "destination": "/dbfz/dbfz.html"
+      },
+      {
+        "source": "/ggrev",
+        "destination": "/guilty_gear/guilty_gear_rev.html"
+      },
+      {
+        "source": "/sfv",
+        "destination": "/sfv/sfv.html"
+      },
+      {
+        "source": "/soul_calibur",
+        "destination": "/soul_calibur/soul_calibur.html"
+      },
+      {
+        "source": "/tekken",
+        "destination": "/tekken/tekken.html"
+      },
+      {
         "source": "/unist",
         "destination": "/unist/unist.html"
       }
