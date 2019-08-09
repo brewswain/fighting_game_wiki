@@ -13,31 +13,31 @@
     "rewrites": [
       {
         "source": "/bbtag",
-        "destination": "/bbtag/bbtag.html"
+        "destination": "/games/bbtag/bbtag.html"
       },
       {
         "source": "/dbfz",
-        "destination": "/dbfz/dbfz.html"
+        "destination": "/games/dbfz/dbfz.html"
       },
       {
         "source": "/ggrev",
-        "destination": "/guilty_gear/guilty_gear_rev.html"
+        "destination": "/games/guilty_gear/guilty_gear_rev.html"
       },
       {
         "source": "/sfv",
-        "destination": "/sfv/sfv.html"
+        "destination": "/games/sfv/sfv.html"
       },
       {
         "source": "/soul_calibur",
-        "destination": "/soul_calibur/soul_calibur.html"
+        "destination": "/games/soul_calibur/soul_calibur.html"
       },
       {
         "source": "/tekken",
-        "destination": "/tekken/tekken.html"
+        "destination": "/games/tekken/tekken.html"
       },
       {
         "source": "/unist",
-        "destination": "/unist/unist.html"
+        "destination": "/games/unist/unist.html"
       }
     ],
     "public": "public",
