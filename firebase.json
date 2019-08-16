@@ -24,6 +24,10 @@
         "destination": "/games/guilty_gear/guilty_gear_rev.html"
       },
       {
+        "source": "/samsho",
+        "destination": "/games/samurai_shodown/samurai_shodown.html"
+      },
+      {
         "source": "/sfv",
         "destination": "/games/sfv/sfv.html"
       },
