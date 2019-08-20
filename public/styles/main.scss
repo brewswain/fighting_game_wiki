@@ -10,6 +10,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
 /* Main NavBar styling */
 
 .navbar {
@@ -42,6 +47,7 @@ body {
   flex-direction: column;
   width: 70px;
   height: 100vh;
+  position: fixed;
   // padding-left: 2rem;
 }
 
@@ -70,7 +76,7 @@ body {
 /* Page Layout elements */
 .container {
   position: absolute;
-  right: 45vh;
+  left: 77vh;
   top: 5%;
 }
 /* Control Rules- Untouched */
@@ -179,6 +185,76 @@ body {
     padding-bottom: 1rem;
   }
 }
+
+/* Frame Data table*/
+table {
+  border-collapse: collapse;
+  margin: 0 0 1rem 0;
+}
+
+.parent-table {
+  border: 1px solid #cecfd5;
+}
+.table-container {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #cecfd5;
+}
+
+.table-image {
+  display: flex;
+  flex-direction: column;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #cecfd5;
+}
+
+.border-right {
+  border-right: 1px solid #cecfd5;
+}
+
+.table-shell {
+  vertical-align: top;
+  padding: 0;
+}
+
+.marginless {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  // border: 1px solid #cecfd5;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.borderless tr {
+  :nth-child(1) {
+    border: none;
+
+    background: #4c65a8;
+    color: white;
+  }
+
+  :nth-child(2) {
+    border: none;
+    text-align: left;
+  }
+}
+.borderless {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+/* Combo Section*/
 
 .combos {
   margin-bottom: 1rem;
