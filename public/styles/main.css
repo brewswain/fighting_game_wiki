@@ -8,12 +8,14 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #e7e7e7;
+  background: #fafafa;
 }
 
 h2 {
   margin-bottom: 10px;
   margin-top: 30px;
+  font-size: 2.5rem;
+  padding: 20px 0;
 }
 
 /* Main NavBar styling */
@@ -54,6 +56,25 @@ h2 {
   width: 70px;
   height: 100vh;
   position: fixed;
+}
+
+.sidebar i {
+  cursor: pointer;
+}
+
+.sidebar a {
+  color: black;
+}
+
+.sidebar-icon {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+
+.sidebar-icon:hover {
+  color: white;
+  background: #555555;
 }
 
 .dropdown {
@@ -103,6 +124,17 @@ h2 {
   padding: 2vh 1vw;
   height: 100vh;
   background: white;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
+          box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
+}
+
+.info-nav strong {
+  font-size: 1.3rem;
+}
+
+.info-nav hr {
+  margin-bottom: 0;
+  border: 1px solid gray;
 }
 
 .info-nav ul {
@@ -121,6 +153,15 @@ h2 {
   position: absolute;
   left: 77vh;
   top: 5%;
+}
+
+hr {
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.border-1px {
+  border: 1px solid black;
 }
 
 /* Control Rules- Untouched */
@@ -191,13 +232,15 @@ h2 {
 }
 
 .movelist a {
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
   color: black;
 }
 
 .movelist h1 {
-  font-size: 1.6rem;
+  font-size: 3rem;
   padding-bottom: 1rem;
+  padding: 20px 0;
 }
 
 /* Frame Data table*/
@@ -242,7 +285,7 @@ tr {
 }
 
 .border-right {
-  border-right: 1px solid #cecfd5;
+  border-right: 1px solid #555555;
 }
 
 .text-left {
@@ -290,8 +333,16 @@ td {
 }
 
 .combos h1 {
-  font-size: 1.6rem;
-  padding-bottom: 1rem;
+  font-size: 2.8rem;
+  padding: 50px 0 30px;
+}
+
+.combos li {
+  list-style: none;
+}
+
+.combos .combo-category {
+  font-size: 1.5rem;
 }
 
 .background-image {

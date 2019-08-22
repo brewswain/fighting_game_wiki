@@ -29,10 +29,10 @@
 
     <div class="sidebar">
       <div class="dropdown">
-        <i class="fas fa-home fa-2x"></i>
-        <i class="fas fa-user-friends fa-2x"></i>
-        <i class="fab fa-twitch fa-2x"></i>
-        <i class="fab fa-discord fa-2x"></i>
+        <a href="/../../index.html"><i class="fas fa-home fa-2x sidebar-icon" ></i></a>        
+        <i class="fas fa-user-friends fa-2x button sidebar-icon"></i>       
+        <i class="fab fa-twitch fa-2x button sidebar-icon"></i>
+        <i class="fab fa-discord fa-2x button sidebar-icon"></i>
         <!-- Characters -->
         <div class="dropdown-content">
           <a href="/characters/unist/Akatsuki/akatsuki.html">Akatsuki</a>
@@ -109,13 +109,14 @@
     <section class="info-nav">
       <nav>
         <ul class="right-nav">
-          <a href="#movelist"><li>Standing/Crouching Normals</li></a>
+          <a href="#movelist"><li><strong>Normals</strong> </li></a> <hr>
           <a href="#jumping-normals"><li>Jumping Normals</li></a>
           <a href="#command-normals"><li>Command Normals</li></a>
           <a href="#dashing-normals"><li>Dashing Normals</li></a>
           <a href="#special-moves"><li>Special Moves</li></a>
           <a href="#universal-options"><li>Universal Options</li></a>
-          <a href="#combos"><li>Combos</li></a>
+          <a href="#combos"><li><strong>Combos</strong></li></a>
+
         </ul>
       </nav>
       </nav>
@@ -155,20 +156,25 @@
 
       <section class="movelist">
         <h1 id="movelist">Movelist(WIP)</h1>
+        <hr>
         <a
           href="http://wiki.mizuumi.net/w/Under_Night_In-Birth/UNIST/Enkidu#Move_List"
           target="_blank"
           >Please check out the fantastic UNIST wiki for a more comprehensive
-          Movelist breakdown</a
+          Movelist breakdown.</a
         >
+        <br />
         <br />
         <a
           href="https://docs.google.com/document/d/1MsfBtEj5FYnClKDzt5wS1e1pL1onSEaSYdpzx4noOfU/edit"
           target="_blank"
           >For a detailed breakdown on Enkidu, including hitboxes, gameplan,
-          buttons,combos, and mentality playing him, <br> please check this primer by
+          buttons,combos, and <br> mentality playing him,  please check this primer by
           Saikyo.</a
         >
+        <br>
+        <br>
+        
 
         <!-- Frame Data -->
         <table class="parent-table">
@@ -433,6 +439,7 @@
         </table>
         
         <h2 id="jumping-normals">Jumping Normals</h2>
+        <hr class="border-1px">
 
         <table class="parent-table">
           <tbody>
@@ -575,6 +582,8 @@
 
           
         <h2 id="command-normals">Command Normals</h2>
+        <hr class="border-1px">
+
 
         <table class="parent-table">
             <tbody>
@@ -883,6 +892,8 @@
 
           
           <h2 id="dashing-normals">Dashing Normals</h2>
+          <hr class="border-1px">
+
 
         <table class="parent-table">
             <tbody>
@@ -959,6 +970,8 @@
           </table>
 
           <h2 id="special-moves">Special Moves</h2>
+          <hr class="border-1px">
+
 
           
         <table class="parent-table">
@@ -1427,6 +1440,8 @@
           </table>
 
           <h2 id="universal-options">Universal Options</h2>
+          <hr class="border-1px">
+
 
         <table class="parent-table">
             <tbody>
@@ -1586,15 +1601,15 @@
           </table>
 
       </section>
-
       <section class="combos">
         <h1 id="combos">Combos</h1>
-        <strong>Day One</strong> <br />
+        <hr>
+        <strong class="combo-category">Day One</strong> <br />
         <li>2A > 5A > 5BBB > 5CCC</li>
         <li>5A/2A > 5C > 3C > j.b > j.c > j.236a/b > 2B > 2C > 236A > 6A</li>
 
         <br />
-        <strong>5B/2B Start</strong>
+        <strong class="combo-category">5B/2B Start</strong>
         <li>
           5B/2B > 5C > 3C > j.abc > 66B > j.236A/B > 2B > 2C > 236A > 6A > 6A
         </li>
@@ -1603,7 +1618,7 @@
         </li>
 
         <br />
-        <strong>Counterhit</strong>
+        <strong class="combo-category">Counterhit</strong>
         <li>
           236A/B > 6B > 2B > dl5C > 2[C] > 3C > j.bc > j.236B > 2B > 236A > 6A >
           6A
@@ -1612,5 +1627,7 @@
         <br />
       </section>
     </div>
+    <script src="/../scripts/main.js"></script>
+
   </body>
 </html>
