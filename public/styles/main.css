@@ -43,6 +43,10 @@ h2 {
   color: #31ff53;
 }
 
+i {
+  cursor: pointer;
+}
+
 /* Side Navbar Styling */
 .sidebar {
   background: white;
@@ -56,10 +60,6 @@ h2 {
   width: 70px;
   height: 100vh;
   position: fixed;
-}
-
-.sidebar i {
-  cursor: pointer;
 }
 
 .sidebar a {
@@ -96,11 +96,20 @@ h2 {
   padding: 1.4rem 0;
 }
 
-.dropdown-content {
+.character-list {
   display: none;
 }
 
-.dropdown:hover .dropdown-content {
+.character-list a {
+  color: white;
+  padding-right: 2.5rem;
+}
+
+.stream-list {
+  display: none;
+}
+
+.character-list.visible-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,6 +123,31 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 2rem;
+}
+
+.nav-info {
+  width: 600px;
+  background: #2f2f2f;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  margin-left: 340px;
+  clip-path: circle(100px at 5% -10%);
+  -webkit-clip-path: circle(100px at 5% -12%);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  z-index: 50;
+}
+
+.nav-info.character-open {
+  clip-path: circle(1300px at 5% -12%);
+  -webkit-clip-path: circle(1300px at 5% -12%);
+}
+
+.nav-info.stream-open {
+  clip-path: circle(1300px at 10% -10%);
+  -webkit-clip-path: circle(1300px at 10% -10%);
 }
 
 /* Right side navbar */
@@ -153,6 +187,7 @@ h2 {
   position: absolute;
   left: 77vh;
   top: 5%;
+  z-index: -3;
 }
 
 hr {
@@ -162,6 +197,11 @@ hr {
 
 .border-1px {
   border: 1px solid black;
+}
+
+.float-right {
+  position: absolute;
+  right: 15vh;
 }
 
 /* Control Rules- Untouched */
@@ -189,6 +229,7 @@ hr {
   font-size: 3rem;
   text-align: center;
   color: white;
+  padding-left: 70px;
 }
 
 .character-info {
@@ -349,5 +390,53 @@ td {
   z-index: -1;
   position: absolute;
   top: 0;
+}
+
+.clipboard {
+  background: none;
+  border: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .side-banner {
+    position: absolute;
+    top: 0;
+  }
+  .container {
+    position: absolute;
+    left: 9%;
+    top: 125%;
+    width: 70vw;
+  }
+  table img {
+    width: 170px;
+  }
+  table th,
+  table td {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+  .nav-info {
+    width: 610px;
+    background: #2f2f2f;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    margin-left: 340px;
+    clip-path: circle(100px at 5% -10%);
+    -webkit-clip-path: circle(100px at 5% -12%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    z-index: 500;
+  }
+  .nav-info.character-open {
+    clip-path: circle(1300px at 5% -12%);
+    -webkit-clip-path: circle(1300px at 5% -12%);
+  }
+  .nav-info.stream-open {
+    clip-path: circle(1300px at 10% -10%);
+    -webkit-clip-path: circle(1300px at 10% -10%);
+  }
 }
 /*# sourceMappingURL=main.css.map */

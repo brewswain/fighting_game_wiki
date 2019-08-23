@@ -42,6 +42,10 @@ h2 {
   color: rgb(49, 255, 83);
 }
 
+i {
+  cursor: pointer;
+}
+
 /* Side Navbar Styling */
 
 .sidebar {
@@ -52,10 +56,6 @@ h2 {
   height: 100vh;
   position: fixed;
   // padding-left: 2rem;
-
-  i {
-    cursor: pointer;
-  }
 
   a {
     color: black;
@@ -86,15 +86,49 @@ h2 {
   }
 }
 
-.dropdown-content {
+.character-list {
+  display: none;
+
+  a {
+    color: white;
+    padding-right: 2.5rem;
+  }
+}
+
+.stream-list {
   display: none;
 }
 
-.dropdown:hover .dropdown-content {
+.character-list.visible-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 2rem;
+}
+
+.nav-info {
+  width: 600px;
+  background: #2f2f2f;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  margin-left: 340px;
+  clip-path: circle(100px at 5% -10%);
+  -webkit-clip-path: circle(100px at 5% -12%);
+
+  transition: all 1s ease-out;
+  z-index: 50;
+}
+
+.nav-info.character-open {
+  clip-path: circle(1300px at 5% -12%);
+  -webkit-clip-path: circle(1300px at 5% -12%);
+}
+
+.nav-info.stream-open {
+  clip-path: circle(1300px at 10% -10%);
+  -webkit-clip-path: circle(1300px at 10% -10%);
 }
 
 /* Right side navbar */
@@ -136,6 +170,7 @@ h2 {
   position: absolute;
   left: 77vh;
   top: 5%;
+  z-index: -3;
 }
 
 hr {
@@ -145,6 +180,11 @@ hr {
 
 .border-1px {
   border: 1px solid black;
+}
+
+.float-right {
+  position: absolute;
+  right: 15vh;
 }
 /* Control Rules- Untouched */
 // .character-info {
@@ -195,6 +235,7 @@ hr {
   font-size: 3rem;
   text-align: center;
   color: white;
+  padding-left: 70px;
 }
 
 .character-info {
@@ -340,6 +381,7 @@ td {
   li {
     list-style: none;
   }
+
   .combo-category {
     font-size: 1.5rem;
   }
@@ -350,4 +392,64 @@ td {
   position: absolute;
   // top: 10%;
   top: 0;
+}
+
+.clipboard {
+  background: none;
+  border: none;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 1024px) {
+  .side-banner {
+    position: absolute;
+    top: 0;
+  }
+
+  .container {
+    position: absolute;
+    left: 9%;
+    top: 125%;
+    width: 70vw;
+  }
+
+  table {
+    img {
+      width: 170px;
+    }
+
+    th,
+    td {
+      font-size: 0.9rem;
+      padding: 5px 10px;
+    }
+  }
+
+  .nav-info {
+    width: 610px;
+    background: #2f2f2f;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    margin-left: 340px;
+    clip-path: circle(100px at 5% -10%);
+    -webkit-clip-path: circle(100px at 5% -12%);
+
+    transition: all 1s ease-out;
+    z-index: 500;
+  }
+
+  .nav-info.character-open {
+    clip-path: circle(1300px at 5% -12%);
+    -webkit-clip-path: circle(1300px at 5% -12%);
+  }
+
+  .nav-info.stream-open {
+    clip-path: circle(1300px at 10% -10%);
+    -webkit-clip-path: circle(1300px at 10% -10%);
+  }
+}
+
+@media screen and (max-width: 768px) {
 }
