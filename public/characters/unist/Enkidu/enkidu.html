@@ -51,9 +51,11 @@
             <i class="fas fa-user-friends fa-2x button sidebar-icon"></i>
             <i class="fab fa-twitch fa-2x button sidebar-icon"></i>
             <a href="https://discordapp.com/invite/dyB725K" target="_blank" rel="noreferrer"><i class="fab fa-discord fa-2x button sidebar-icon"></i></a>
+            <li class="navigation-button">Navigation</li>
 
             <!-- Expanded Bar -->
             <div class="nav-info">
+                
                 <div class="character-list">
                     <a href="/characters/unist/Akatsuki/akatsuki.html">Akatsuki</a>
                     <a href="/characters/unist/Byakuya/byakuya.html">Byakuya</a>
@@ -88,7 +90,7 @@
         </div>
     </div>
 
-    <section class="side-banner">
+    <section class="side-banner" id="home">
         <h1 class="character-title">Enkidu</h1>
 
         <img class="background-image" src="enkidu_experimental_banner_v2.png" alt="enkidu.png" />
@@ -132,37 +134,39 @@
       <div class="dropdown">Communities</div> -->
     </div>
 
-    <section class="info-nav">
-        <nav>
-            <ul class="right-nav">
-                <a href="#movelist">
-                    <li><strong>Normals</strong> </li>
-                </a>
-                <hr>
-                <a href="#jumping-normals">
-                    <li>Jumping Normals</li>
-                </a>
-                <a href="#command-normals">
-                    <li>Command Normals</li>
-                </a>
-                <a href="#dashing-normals">
-                    <li>Dashing Normals</li>
-                </a>
-                <a href="#special-moves">
-                    <li>Special Moves</li>
-                </a>
-                <a href="#universal-options">
-                    <li>Universal Options</li>
-                </a>
-                <a href="#combos">
-                    <li><strong>Combos</strong></li>
-                </a>
 
-            </ul>
-        </nav>
-        </nav>
-    </section>
     <div class="container">
+        <section class="internal-navigation">
+            <nav>
+                <ul class="right-nav">
+                  <a href="#home" class="top-of-page"><li><strong>Top of Page</strong></li> </a>
+                    <a href="#movelist">
+                        <li><strong>Normals</strong> </li>
+                    </a>
+                    <hr>
+                    <a href="#jumping-normals">
+                        <li>Jumping Normals</li>
+                    </a>
+                    <a href="#command-normals">
+                        <li>Command Normals</li>
+                    </a>
+                    <a href="#dashing-normals">
+                        <li>Dashing Normals</li>
+                    </a>
+                    <a href="#special-moves">
+                        <li>Special Moves</li>
+                    </a>
+                    <a href="#universal-options">
+                        <li>Universal Options</li>
+                    </a>
+                    <a href="#combos">
+                        <li><strong>Combos</strong></li>
+                    </a>
+    
+                </ul>
+            </nav>
+            </nav>
+        </section>
         <!-- <section class="character-info">
         <h1>Info</h1>
         <p>
@@ -1648,13 +1652,13 @@
 
     </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   new Twitch.Embed("twitch-embed", {
     width: 854,
     height: 480,
     channel: "monstercat"
   });
-</script>
+</script> -->
 
   </body>
 </html>

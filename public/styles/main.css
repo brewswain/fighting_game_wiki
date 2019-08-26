@@ -126,6 +126,10 @@ i {
   padding-top: 2rem;
 }
 
+.navigation-button {
+  display: none;
+}
+
 .nav-info {
   width: 600px;
   background: #2f2f2f;
@@ -137,7 +141,7 @@ i {
   -webkit-clip-path: circle(100px at 5% -12%);
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
-  z-index: 50;
+  z-index: 1;
 }
 
 .nav-info.character-open {
@@ -151,7 +155,7 @@ i {
 }
 
 /* Right side navbar */
-.info-nav {
+.internal-navigation {
   position: fixed;
   top: 0;
   right: 0;
@@ -162,21 +166,29 @@ i {
           box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
 }
 
-.info-nav strong {
+.internal-navigation .navigation-button {
+  display: none;
+}
+
+.internal-navigation strong {
   font-size: 1.3rem;
 }
 
-.info-nav hr {
+.internal-navigation .top-of-page {
+  display: none;
+}
+
+.internal-navigation hr {
   margin-bottom: 0;
   border: 1px solid gray;
 }
 
-.info-nav ul {
+.internal-navigation ul {
   list-style-type: none;
   line-height: 2rem;
 }
 
-.info-nav ul a {
+.internal-navigation ul a {
   text-decoration: none;
   color: black;
   font-weight: 400;
@@ -187,7 +199,14 @@ i {
   position: absolute;
   left: 77vh;
   top: 5%;
-  z-index: -3;
+  z-index: -2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 hr {
@@ -234,7 +253,7 @@ hr {
 
 .character-info {
   position: absolute;
-  top: 61.5vh;
+  bottom: 0.6vh;
   margin-left: 13%;
   margin-bottom: 0.1rem;
   padding: 10px;
@@ -288,6 +307,7 @@ hr {
 table {
   border-collapse: collapse;
   margin: 0 0 1rem 0;
+  max-width: 800px;
 }
 
 .parent-table {
@@ -387,7 +407,7 @@ td {
 }
 
 .background-image {
-  z-index: -1;
+  z-index: -3;
   position: absolute;
   top: 0;
 }
@@ -399,6 +419,10 @@ td {
 
 /* Responsive design */
 @media screen and (max-width: 1024px) {
+  .sidebar {
+    -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
+            box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
+  }
   .side-banner {
     position: absolute;
     top: 0;
@@ -425,18 +449,98 @@ td {
     top: 0;
     margin-left: 340px;
     clip-path: circle(100px at 5% -10%);
-    -webkit-clip-path: circle(100px at 5% -12%);
+    -webkit-clip-path: circle(100px at 0% -12%);
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
-    z-index: 500;
+    z-index: 2;
   }
   .nav-info.character-open {
-    clip-path: circle(1300px at 5% -12%);
-    -webkit-clip-path: circle(1300px at 5% -12%);
+    -webkit-clip-path: circle(1300px at 0% -12%);
   }
   .nav-info.stream-open {
     clip-path: circle(1300px at 10% -10%);
     -webkit-clip-path: circle(1300px at 10% -10%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* Navigation Styling */
+  .sidebar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 70px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .sidebar .navigation-button {
+    display: block;
+    padding-left: 2.2rem;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .side-banner {
+    z-index: -15;
+  }
+  .dropdown {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .internal-navigation {
+    position: fixed;
+    top: -40%;
+    right: 0;
+    padding: 2vh 1vw;
+    height: 33vh;
+    width: 45%;
+    background: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-align: center;
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+  }
+  .internal-navigation .top-of-page {
+    display: block;
+  }
+  .right-nav a {
+    z-index: 2;
+  }
+  .internal-navigation-dropdown {
+    top: 60px;
+  }
+  /* Page Layout */
+  .side-banner {
+    width: 100%;
+  }
+  .side-banner .character-info {
+    width: 100vw;
+    bottom: 0.6vh;
+    margin-left: 0%;
+  }
+  .side-banner .character-title {
+    padding-top: 75px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    padding-left: 0;
+  }
+  .background-image {
+    width: 100%;
+    height: calc(100vh - 70px);
+    top: 70px;
+  }
+  .container {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

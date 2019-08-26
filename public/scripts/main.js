@@ -6,6 +6,8 @@ const discord = document.querySelector(".fa-discord");
 const navInfo = document.querySelector(".nav-info");
 const characterList = document.querySelector(".character-list");
 const streamList = document.querySelector(".stream-list");
+const navigationButton = document.querySelector(".navigation-button");
+const internalNavigation = document.querySelector(".internal-navigation");
 
 characters.addEventListener("click", () => {
   navInfo.classList.toggle("character-open");
@@ -47,8 +49,8 @@ stream.addEventListener("click", () => {
   }
 });
 
-function navBarExpand() {
-  navInfo.classList.toggle("open");
-}
+navigationButton.addEventListener("click", () => {
+  internalNavigation.classList.toggle("internal-navigation-dropdown");
+});
 
 // Experimental logic to ensure that clicking one button to open and using a different button to close does not cause any glitches.
