@@ -9,6 +9,15 @@
 body {
   font-family: "Roboto", sans-serif;
   background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.site-container {
+  overflow-x: hidden;
 }
 
 h2 {
@@ -60,6 +69,7 @@ i {
   width: 70px;
   height: 100vh;
   position: fixed;
+  top: 0;
 }
 
 .sidebar a {
@@ -252,13 +262,14 @@ hr {
 }
 
 .character-info {
-  position: absolute;
-  bottom: 0.6vh;
+  position: relative;
+  top: 55%;
   margin-left: 13%;
+  z-index: -3;
   margin-bottom: 0.1rem;
   padding: 10px;
   color: white;
-  width: 600px;
+  width: 590px;
 }
 
 .character-info p {
@@ -465,22 +476,19 @@ td {
 
 @media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    width: 100vw;
   }
   /* Navigation Styling */
   .sidebar {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     -webkit-box-shadow: none;
             box-shadow: none;
+    top: 0;
+    z-index: 50000000;
   }
   .sidebar .navigation-button {
     display: block;
-    padding-left: 2.2rem;
     list-style-type: none;
     cursor: pointer;
     font-size: 1.6rem;
@@ -499,8 +507,7 @@ td {
     position: fixed;
     top: -40%;
     right: 0;
-    padding: 2vh 1vw;
-    height: 33vh;
+    height: 45vh;
     width: 45%;
     background: white;
     -webkit-box-shadow: none;
@@ -516,7 +523,28 @@ td {
     z-index: 2;
   }
   .internal-navigation-dropdown {
+    height: 100vh;
     top: 60px;
+  }
+  .nav-info {
+    width: 610px;
+    background: #2f2f2f;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    clip-path: circle(100px at 5% -10%);
+    -webkit-clip-path: circle(100px at 0% -12%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    z-index: 2;
+    display: none;
+  }
+  .nav-info.character-open {
+    -webkit-clip-path: circle(1300px at 0% -12%);
+  }
+  .nav-info.stream-open {
+    clip-path: circle(1300px at 10% -10%);
+    -webkit-clip-path: circle(1300px at 10% -10%);
   }
   /* Page Layout */
   .side-banner {
@@ -526,21 +554,39 @@ td {
     width: 100vw;
     bottom: 0.6vh;
     margin-left: 0%;
+    background: #2f2f2f;
+    margin-bottom: 3rem;
   }
   .side-banner .character-title {
     padding-top: 75px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     color: white;
     padding-left: 0;
   }
   .background-image {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     top: 70px;
   }
   .container {
+    left: 0%;
+    padding-top: 13rem;
+    padding-left: 1rem;
     width: 100%;
+    overflow-x: hidden;
+  }
+  /* Movelist Section */
+  .movelist {
+    width: 100%;
+    padding: 0%;
+  }
+  .combos {
+    overflow-x: hidden;
+    width: 90%;
+  }
+  .combos i {
+    right: 5%;
   }
 }
 /*# sourceMappingURL=main.css.map */
