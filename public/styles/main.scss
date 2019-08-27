@@ -300,6 +300,10 @@ hr {
   line-height: 1.6rem;
   padding: 10px;
 
+  .character-move {
+    display: none;
+  }
+
   a {
     text-decoration: underline;
     font-weight: bold;
@@ -316,7 +320,8 @@ hr {
 table {
   border-collapse: collapse;
   margin: 0 0 1rem 0;
-  max-width: 800px;
+  font-size: 0.9rem;
+  max-width: 50%;
 }
 
 .parent-table {
@@ -488,7 +493,7 @@ td {
   .sidebar {
     width: 100vw;
     height: 70px;
-    box-shadow: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
     top: 0;
     z-index: 50000000;
 
@@ -519,6 +524,8 @@ td {
     box-shadow: none;
     text-align: center;
     transition: all 0.8s ease-out;
+    z-index: 2;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
 
     .top-of-page {
       display: block;
@@ -587,21 +594,54 @@ td {
 
   .container {
     left: 0%;
-    padding-top: 13rem;
-    padding-left: 1rem;
+    margin-top: 13rem;
     width: 100%;
     overflow-x: hidden;
+
+    h1,
+    h2 {
+      line-height: 2.8rem;
+      text-align: center;
+    }
   }
 
   /* Movelist Section */
+  .movelist-header {
+    padding-left: 1rem;
+  }
   .movelist {
     width: 100%;
     padding: 0%;
+    overflow-x: scroll;
+
+    .character-move {
+      display: block;
+      text-align: center;
+      padding-top: 1rem;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+    }
   }
 
   table {
-    img {
+    margin-left: auto;
+    margin-right: auto;
+
+    th,
+    td {
+      font-size: 0.8rem;
+      padding: 4px;
     }
+
+    img {
+      display: none;
+    }
+  }
+
+  .table-container {
+    display: none;
   }
 
   .combos {

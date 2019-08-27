@@ -302,6 +302,10 @@ hr {
   padding: 10px;
 }
 
+.movelist .character-move {
+  display: none;
+}
+
 .movelist a {
   text-decoration: underline;
   font-weight: bold;
@@ -318,7 +322,8 @@ hr {
 table {
   border-collapse: collapse;
   margin: 0 0 1rem 0;
-  max-width: 800px;
+  font-size: 0.9rem;
+  max-width: 50%;
 }
 
 .parent-table {
@@ -482,8 +487,8 @@ td {
   .sidebar {
     width: 100vw;
     height: 70px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
     top: 0;
     z-index: 50000000;
   }
@@ -515,6 +520,9 @@ td {
     text-align: center;
     -webkit-transition: all 0.8s ease-out;
     transition: all 0.8s ease-out;
+    z-index: 2;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
   }
   .internal-navigation .top-of-page {
     display: block;
@@ -571,15 +579,46 @@ td {
   }
   .container {
     left: 0%;
-    padding-top: 13rem;
-    padding-left: 1rem;
+    margin-top: 13rem;
     width: 100%;
     overflow-x: hidden;
   }
+  .container h1,
+  .container h2 {
+    line-height: 2.8rem;
+    text-align: center;
+  }
   /* Movelist Section */
+  .movelist-header {
+    padding-left: 1rem;
+  }
   .movelist {
     width: 100%;
     padding: 0%;
+    overflow-x: scroll;
+  }
+  .movelist .character-move {
+    display: block;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .movelist h2 {
+    font-size: 2.3rem;
+  }
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table th,
+  table td {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+  table img {
+    display: none;
+  }
+  .table-container {
+    display: none;
   }
   .combos {
     overflow-x: hidden;
