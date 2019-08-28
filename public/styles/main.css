@@ -162,8 +162,9 @@ i {
 }
 
 .nav-info.stream-open {
-  clip-path: circle(1300px at 10% -10%);
-  -webkit-clip-path: circle(1300px at 10% -10%);
+  clip-path: circle(1300px at 5% -12%);
+  -webkit-clip-path: circle(1300px at 5% -12%);
+  visibility: visible;
 }
 
 /* Right side navbar */
@@ -538,20 +539,24 @@ td {
     top: 60px;
   }
   .nav-info {
-    width: 610px;
+    width: 100%;
     background: #2f2f2f;
     height: 100vh;
     position: absolute;
-    top: 0;
+    top: 70px;
+    left: 0;
     clip-path: circle(100px at 5% -10%);
     -webkit-clip-path: circle(100px at 0% -12%);
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
     z-index: 2;
-    display: none;
+  }
+  .nav-info .character-list a {
+    padding-right: 0;
   }
   .nav-info.character-open {
-    -webkit-clip-path: circle(1300px at 0% -12%);
+    clip-path: circle(1300px at 5% 50%);
+    -webkit-clip-path: circle(1300px at 5% 50%);
   }
   .nav-info.stream-open {
     clip-path: circle(1300px at 10% -10%);
@@ -591,6 +596,7 @@ td {
     line-height: 2.8rem;
     text-align: center;
   }
+  /* Navbar */
   /* Movelist Section */
   .movelist-header {
     padding-left: 1rem;
@@ -619,6 +625,9 @@ td {
   }
   table img {
     display: none;
+  }
+  .special-move-table {
+    width: 90%;
   }
   .table-container {
     display: none;

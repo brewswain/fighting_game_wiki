@@ -131,7 +131,7 @@ i {
   -webkit-clip-path: circle(100px at 5% -12%);
   transition: all 1s ease-out;
   z-index: 1;
-  // Visibility toggled to ensure edge compatibility; No animation though.
+  // Visibility toggled to ensure edge compatibility; No animation in edge though.
   visibility: hidden;
 }
 
@@ -139,13 +139,16 @@ i {
   clip-path: circle(1300px at 5% -12%);
   -webkit-clip-path: circle(1300px at 5% -12%);
 
-  // Visibility toggled to ensure edge compatibility; No animation though.
+  // Visibility toggled to ensure edge compatibility; No animation in edge though.
   visibility: visible;
 }
 
 .nav-info.stream-open {
-  clip-path: circle(1300px at 10% -10%);
-  -webkit-clip-path: circle(1300px at 10% -10%);
+  clip-path: circle(1300px at 5% -12%);
+  -webkit-clip-path: circle(1300px at 5% -12%);
+
+  // Visibility toggled to ensure edge compatibility; No animation  in edge though.
+  visibility: visible;
 }
 
 /* Right side navbar */
@@ -517,21 +520,28 @@ td {
   }
 
   .nav-info {
-    width: 610px;
+    width: 100%;
     background: #2f2f2f;
     height: 100vh;
     position: absolute;
-    top: 0;
+    top: 70px;
+    left: 0;
     clip-path: circle(100px at 5% -10%);
     -webkit-clip-path: circle(100px at 0% -12%);
 
     transition: all 1s ease-out;
     z-index: 2;
-    display: none;
+
+    .character-list {
+      a {
+        padding-right: 0;
+      }
+    }
   }
 
   .nav-info.character-open {
-    -webkit-clip-path: circle(1300px at 0% -12%);
+    clip-path: circle(1300px at 5% 50%);
+    -webkit-clip-path: circle(1300px at 5% 50%);
   }
 
   .nav-info.stream-open {
@@ -580,6 +590,8 @@ td {
     }
   }
 
+  /* Navbar */
+
   /* Movelist Section */
   .movelist-header {
     padding-left: 1rem;
@@ -613,6 +625,10 @@ td {
     img {
       display: none;
     }
+  }
+
+  .special-move-table {
+    width: 90%;
   }
 
   .table-container {
