@@ -146,7 +146,7 @@ i {
   height: 100vh;
   position: absolute;
   top: 0;
-  margin-left: 340px;
+  left: 70px;
   clip-path: circle(100px at 5% -10%);
   -webkit-clip-path: circle(100px at 5% -12%);
   -webkit-transition: all 1s ease-out;
@@ -233,7 +233,6 @@ hr {
   right: 15vh;
 }
 
-/* Control Rules- Untouched */
 /* Experimental rules */
 .side-banner {
   display: -webkit-box;
@@ -323,7 +322,7 @@ table {
   border-collapse: collapse;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .parent-table {
@@ -510,7 +509,7 @@ td {
   }
   .internal-navigation {
     position: fixed;
-    top: -40%;
+    top: -100%;
     right: 0;
     height: 45vh;
     width: 45%;
@@ -526,6 +525,8 @@ td {
   }
   .internal-navigation .top-of-page {
     display: block;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
   }
   .right-nav a {
     z-index: 2;
