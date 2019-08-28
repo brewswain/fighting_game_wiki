@@ -152,11 +152,13 @@ i {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
   z-index: 1;
+  visibility: hidden;
 }
 
 .nav-info.character-open {
   clip-path: circle(1300px at 5% -12%);
   -webkit-clip-path: circle(1300px at 5% -12%);
+  visibility: visible;
 }
 
 .nav-info.stream-open {
@@ -462,7 +464,7 @@ td {
     height: 100vh;
     position: absolute;
     top: 0;
-    margin-left: 340px;
+    left: 70px;
     clip-path: circle(100px at 5% -10%);
     -webkit-clip-path: circle(100px at 0% -12%);
     -webkit-transition: all 1s ease-out;
