@@ -113,6 +113,13 @@ i {
 .character-list a {
   color: white;
   padding-right: 2.5rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.character-list li {
+  list-style-type: none;
 }
 
 .video-list {
@@ -134,6 +141,19 @@ i {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 2rem;
+  margin-left: 70px;
+}
+
+.character-list.visible-flex span {
+  display: none;
+}
+
+.character-list.visible-flex .flip-to-left {
+  display: none;
+}
+
+.character-list.visible-flex .flip-to-right {
+  display: none;
 }
 
 .video-list.visible-flex {
@@ -154,12 +174,15 @@ i {
 }
 
 .video-list.visible-flex a {
-  color: whitesmoke;
-  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  border-bottom: #ffffff 1px solid;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .video-list.visible-flex iframe {
-  margin-top: 2rem;
+  margin: 0.8rem;
 }
 
 .navigation-button {
@@ -191,6 +214,10 @@ i {
   clip-path: circle(1300px at 5% -12%);
   -webkit-clip-path: circle(1300px at 5% -12%);
   visibility: visible;
+}
+
+.video-wrapper {
+  margin-left: 25px;
 }
 
 /* Right side navbar */
@@ -335,7 +362,8 @@ hr {
 }
 
 .movelist a {
-  text-decoration: underline;
+  border-bottom: #000 1px solid;
+  text-decoration: none;
   font-weight: bold;
   color: black;
 }
@@ -594,6 +622,9 @@ td {
     font-size: 1.6rem;
     font-weight: bold;
   }
+  .sidebar-icon {
+    width: 20vw;
+  }
   .side-banner {
     z-index: -15;
   }
@@ -645,8 +676,51 @@ td {
     transition: all 1s ease-out;
     z-index: 2;
   }
+  .nav-info .character-list {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
   .nav-info .character-list a {
     padding-right: 0;
+  }
+  .nav-info .character-list.visible-flex {
+    margin-left: 0;
+  }
+  .nav-info .character-list.visible-flex span {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.3rem;
+    position: absolute;
+  }
+  .nav-info .character-list.visible-flex .flip-to-left {
+    top: 25px;
+    left: 35px;
+  }
+  .nav-info .character-list.visible-flex .flip-to-right {
+    display: none;
+    top: 25px;
+    right: 35px;
+  }
+  .nav-info .character-list.visible-flex .character-flip {
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .nav-info .character-list.visible-flex li {
+    width: 100%;
+    text-align: right;
+    list-style-type: none;
+    padding: 15px 25px;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  .nav-info .character-list.visible-flex li:hover {
+    background: white;
+  }
+  .nav-info .character-list.visible-flex li:hover a {
+    color: black;
+  }
+  .nav-info .character-list.visible-flex a {
+    font-size: 1.3rem;
+    text-decoration: none;
   }
   .nav-info.character-open {
     clip-path: circle(1300px at 5% 50%);
@@ -673,7 +747,8 @@ td {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 4.5rem;
+    padding-bottom: 70px;
+    margin-left: 0;
   }
   /* Page Layout */
   .side-banner {
@@ -709,7 +784,6 @@ td {
     line-height: 2.8rem;
     text-align: center;
   }
-  /* Navbar */
   /* Movelist Section */
   .movelist-header {
     padding-left: 1rem;

@@ -1,37 +1,46 @@
-const button = document.querySelectorAll(".button");
-const home = document.querySelector(".fa-home");
 const characters = document.querySelector(".fa-user-friends");
 const video = document.querySelector(".fa-video");
-const discord = document.querySelector(".fa-discord");
 const navInfo = document.querySelector(".nav-info");
 const characterList = document.querySelector(".character-list");
 const videoList = document.querySelector(".video-list");
 const navigationButton = document.querySelector(".navigation-button");
 const internalNavigation = document.querySelector(".internal-navigation");
-
-characters.addEventListener("click", () => {
-  navInfo.classList.toggle("character-open");
-
-  if (characterList.classList.contains("visible-flex")) {
-    setTimeout(() => {
-      characterList.classList.toggle("visible-flex");
-    }, 1000);
-  } else {
-    characterList.classList.toggle("visible-flex");
-  }
-
-  if (
-    navInfo.classList.contains("video-open") ||
-    videoList.classList.contains("visible-flex")
-  ) {
-    navInfo.classList.remove("video-open");
-    videoList.classList.remove("visible-flex");
-  }
-});
+const leftHandedMode = document.querySelector(".flip-to-left");
+const rightHandedMode = document.querySelector(".flip-to-right");
+const characterFlip = document.querySelectorAll(".character-flip");
+const isLeftHanded = localStorage.getItem("left-handed");
+const mobileView = window.matchMedia("(max-width: 820px)");
+const desktopView = window.matchMedia("(min-width: 821px)");
 
 video.addEventListener("click", () => {
   navInfo.classList.toggle("video-open");
+  videoCloseNav();
+});
 
+characters.addEventListener("click", () => {
+  navInfo.classList.toggle("character-open");
+  characterCloseNav();
+  if (desktopView.matches) {
+    hideSpan();
+  } else {
+    getListOrientation();
+  }
+});
+
+navigationButton.addEventListener("click", () => {
+  openInternalNavigation();
+});
+
+leftHandedMode.addEventListener("click", () => {
+  makeLeftHanded();
+});
+rightHandedMode.addEventListener("click", () => {
+  makeRightHanded();
+});
+
+getListOrientation();
+
+function videoCloseNav() {
   if (videoList.classList.contains("visible-flex")) {
     setTimeout(() => {
       videoList.classList.remove("visible-flex");
@@ -42,15 +51,85 @@ video.addEventListener("click", () => {
 
   if (
     navInfo.classList.contains("character-open") ||
-    characterList.classList.contains("visible-flex")
+    characterList.classList.contains("visible-flex") ||
+    internalNavigation.classList.contains("internal-navigation-dropdown")
   ) {
+    internalNavigation.classList.remove("internal-navigation-dropdown");
     navInfo.classList.remove("character-open");
     characterList.classList.remove("visible-flex");
   }
-});
+}
 
-navigationButton.addEventListener("click", () => {
+function characterCloseNav() {
+  if (characterList.classList.contains("visible-flex")) {
+    setTimeout(() => {
+      characterList.classList.toggle("visible-flex");
+    }, 1000);
+  } else {
+    characterList.classList.toggle("visible-flex");
+  }
+
+  if (
+    navInfo.classList.contains("video-open") ||
+    videoList.classList.contains("visible-flex") ||
+    internalNavigation.classList.contains("internal-navigation-dropdown")
+  ) {
+    internalNavigation.classList.remove("internal-navigation-dropdown");
+    navInfo.classList.remove("video-open");
+    videoList.classList.remove("visible-flex");
+  }
+}
+
+function openInternalNavigation() {
+  if (
+    navInfo.classList.contains("video-open") ||
+    navInfo.classList.contains("character-open")
+  ) {
+    closeNav();
+  }
   internalNavigation.classList.toggle("internal-navigation-dropdown");
-});
+}
 
-// Experimental logic to ensure that clicking one button to open and using a different button to close does not cause any glitches.
+function closeNav() {
+  navInfo.classList.remove("video-open");
+  navInfo.classList.remove("character-open");
+  setTimeout(() => {
+    characterList.classList.toggle("visible-flex");
+    videoList.classList.remove("visible-flex");
+  }, 1000);
+}
+
+function makeLeftHanded() {
+  characterFlip.forEach(characterFlip => {
+    characterFlip.style.textAlign = "left";
+    leftHandedMode.style.display = "none";
+    rightHandedMode.style.display = "block";
+    localStorage.setItem("left-handed", "true");
+  });
+}
+
+function makeRightHanded() {
+  characterFlip.forEach(characterFlip => {
+    characterFlip.style.textAlign = "right";
+    rightHandedMode.style.display = "none";
+    leftHandedMode.style.display = "block";
+    localStorage.setItem("left-handed", "false");
+  });
+}
+
+function hideSpan() {
+  leftHandedMode.style.display = "none";
+  rightHandedMode.style.display = "none";
+}
+
+function getListOrientation() {
+  if (mobileView.matches) {
+    if (isLeftHanded === "true") {
+      makeLeftHanded();
+    } else {
+      makeRightHanded();
+    }
+  } else {
+    hideSpan();
+  }
+}
