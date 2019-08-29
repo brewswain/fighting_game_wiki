@@ -19,11 +19,12 @@ video.addEventListener("click", () => {
 
 characters.addEventListener("click", () => {
   navInfo.classList.toggle("character-open");
+
   characterCloseNav();
   if (desktopView.matches) {
     hideSpan();
   } else {
-    getListOrientation();
+    showSpan();
   }
 });
 
@@ -122,6 +123,16 @@ function hideSpan() {
   rightHandedMode.style.display = "none";
 }
 
+function showSpan() {
+  if (isLeftHanded === "true") {
+    rightHandedMode.style.display = "block";
+    leftHandedMode.style.display = "none";
+  } else if (!isLeftHanded) {
+    rightHandedMode.style.display = "block";
+    leftHandedMode.style.display = "none";
+  }
+}
+
 function getListOrientation() {
   if (mobileView.matches) {
     if (isLeftHanded === "true") {
@@ -129,7 +140,5 @@ function getListOrientation() {
     } else {
       makeRightHanded();
     }
-  } else {
-    hideSpan();
   }
 }
