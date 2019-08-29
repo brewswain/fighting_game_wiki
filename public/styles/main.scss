@@ -104,7 +104,7 @@ i {
   }
 }
 
-.stream-list {
+.video-list {
   display: none;
 }
 
@@ -114,6 +114,22 @@ i {
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+}
+
+.video-list.visible-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  a {
+    color: whitesmoke;
+    text-align: center;
+  }
+
+  iframe {
+    margin-top: 2rem;
+  }
 }
 
 .navigation-button {
@@ -134,25 +150,19 @@ i {
 
   transition: all 1s ease-out;
   z-index: 1;
-<<<<<<< HEAD
   // Visibility toggled to ensure edge compatibility; No animation in edge though.
   visibility: hidden;
-=======
->>>>>>> parent of 228f315... Further ensured FireFox Compatibility, began working on edge compatibility.
 }
 
 .nav-info.character-open {
   clip-path: circle(1300px at 5% -12%);
   -webkit-clip-path: circle(1300px at 5% -12%);
-<<<<<<< HEAD
 
   // Visibility toggled to ensure edge compatibility; No animation in edge though.
   visibility: visible;
-=======
->>>>>>> parent of 228f315... Further ensured FireFox Compatibility, began working on edge compatibility.
 }
 
-.nav-info.stream-open {
+.nav-info.video-open {
   clip-path: circle(1300px at 5% -12%);
   -webkit-clip-path: circle(1300px at 5% -12%);
 
@@ -413,16 +423,81 @@ td {
 }
 
 /* Responsive design */
+@media (max-width: 1600px) {
+  table {
+    th,
+    td {
+      padding: 4px;
+    }
+    img {
+      width: 150px;
+    }
+  }
 
-@media screen and (max-width: 1024px) {
+  .container {
+    left: 73vh;
+    width: 40%;
+  }
+}
+
+@media (max-width: 1366px) {
+  table {
+    max-width: 100%;
+    th,
+    td {
+      font-size: 0.8rem;
+      padding: 4px;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  .container {
+    left: 73vh;
+    width: 33%;
+  }
+
+  .movelist {
+    .character-move {
+      display: block;
+      padding-top: 1rem;
+      text-align: justify;
+      padding-left: 0.3rem;
+    }
+  }
+
+  .movelist-header {
+    width: 60%;
+  }
+  .special-move-table {
+    width: 90%;
+  }
+
+  .table-container {
+    display: none;
+  }
+
+  .combos {
+    width: 60%;
+  }
+
+  .float-right {
+    position: absolute;
+    right: 20vh;
+  }
+}
+
+@media (max-width: 1200px) {
   .sidebar {
-    // box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.17);
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
   }
 
   .side-banner {
     position: absolute;
     top: 0;
+    background: #2f2f2f;
   }
 
   .container {
@@ -434,6 +509,7 @@ td {
 
   table {
     img {
+      display: block;
       width: 170px;
     }
 
@@ -444,31 +520,46 @@ td {
     }
   }
 
+  .table-container {
+    display: table;
+  }
+
+  .movelist {
+    .character-move {
+      display: none;
+    }
+  }
+  .movelist-header {
+    width: 100%;
+  }
+
   .nav-info {
     width: 610px;
     background: #2f2f2f;
     height: 100vh;
     position: absolute;
     top: 0;
-    margin-left: 340px;
+    left: 70px;
     clip-path: circle(100px at 5% -10%);
     -webkit-clip-path: circle(100px at 0% -12%);
 
     transition: all 1s ease-out;
+    overflow-y: scroll;
     z-index: 2;
   }
 
   .nav-info.character-open {
     -webkit-clip-path: circle(1300px at 0% -12%);
+    clip-path: circle(1300px at 0% -12%);
   }
 
-  .nav-info.stream-open {
+  .nav-info.video-open {
     clip-path: circle(1300px at 10% -10%);
     -webkit-clip-path: circle(1300px at 10% -10%);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 820px) {
   body {
     width: 100vw;
   }
@@ -537,6 +628,7 @@ td {
     left: 0;
     clip-path: circle(100px at 5% -10%);
     -webkit-clip-path: circle(100px at 0% -12%);
+    overflow-y: scroll;
 
     transition: all 1s ease-out;
     z-index: 2;
@@ -551,13 +643,28 @@ td {
   .nav-info.character-open {
     clip-path: circle(1300px at 5% 50%);
     -webkit-clip-path: circle(1300px at 5% 50%);
+    overflow-y: scroll;
   }
 
-  .nav-info.stream-open {
+  .nav-info.video-open {
     clip-path: circle(1300px at 10% -10%);
     -webkit-clip-path: circle(1300px at 10% -10%);
+    overflow-y: scroll;
   }
 
+  .video-list.visible-flex {
+    iframe {
+      margin: 0.4rem;
+      max-width: 95%;
+    }
+  }
+
+  .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4.5rem;
+  }
   /* Page Layout */
 
   .side-banner {
@@ -587,7 +694,7 @@ td {
   }
 
   .container {
-    left: 0%;
+    left: 0;
     margin-top: 13rem;
     width: 100%;
     overflow-x: hidden;

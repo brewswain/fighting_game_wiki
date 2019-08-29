@@ -1,11 +1,11 @@
 const button = document.querySelectorAll(".button");
 const home = document.querySelector(".fa-home");
 const characters = document.querySelector(".fa-user-friends");
-const stream = document.querySelector(".fa-twitch");
+const video = document.querySelector(".fa-video");
 const discord = document.querySelector(".fa-discord");
 const navInfo = document.querySelector(".nav-info");
 const characterList = document.querySelector(".character-list");
-const streamList = document.querySelector(".stream-list");
+const videoList = document.querySelector(".video-list");
 const navigationButton = document.querySelector(".navigation-button");
 const internalNavigation = document.querySelector(".internal-navigation");
 
@@ -21,23 +21,23 @@ characters.addEventListener("click", () => {
   }
 
   if (
-    navInfo.classList.contains("stream-open") ||
-    streamList.classList.contains("visible-flex")
+    navInfo.classList.contains("video-open") ||
+    videoList.classList.contains("visible-flex")
   ) {
-    navInfo.classList.remove("stream-open");
-    streamList.classList.remove("visible-flex");
+    navInfo.classList.remove("video-open");
+    videoList.classList.remove("visible-flex");
   }
 });
 
-stream.addEventListener("click", () => {
-  navInfo.classList.toggle("stream-open");
+video.addEventListener("click", () => {
+  navInfo.classList.toggle("video-open");
 
-  if (streamList.classList.contains("visible-flex")) {
+  if (videoList.classList.contains("visible-flex")) {
     setTimeout(() => {
-      streamList.classList.remove("visible-flex");
-    }, 100);
+      videoList.classList.remove("visible-flex");
+    }, 1000);
   } else {
-    streamList.classList.toggle("visible-flex");
+    videoList.classList.toggle("visible-flex");
   }
 
   if (
