@@ -256,7 +256,7 @@ hr {
 
 .float-right {
   position: absolute;
-  right: 15vh;
+  right: 20vh;
 }
 
 /* Experimental rules */
@@ -281,7 +281,7 @@ hr {
 
 .character-info {
   position: relative;
-  top: 55%;
+  top: 52%;
   margin-left: 13%;
   z-index: -3;
 
@@ -335,6 +335,10 @@ hr {
     padding-bottom: 1rem;
     padding: 20px 0;
   }
+}
+
+.movelist-header {
+  width: 70%;
 }
 
 /* Frame Data table*/
@@ -464,6 +468,14 @@ td {
     left: 73vh;
     width: 40%;
   }
+
+  .combos {
+    width: 90%;
+  }
+
+  .float-right {
+    right: 5vh;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -506,12 +518,12 @@ td {
   }
 
   .combos {
-    width: 60%;
+    width: 70%;
   }
 
   .float-right {
     position: absolute;
-    right: 20vh;
+    right: 7vh;
   }
 }
 
