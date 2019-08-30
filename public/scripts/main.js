@@ -39,8 +39,6 @@ rightHandedMode.addEventListener("click", () => {
   makeRightHanded();
 });
 
-getListOrientation();
-
 function videoCloseNav() {
   if (videoList.classList.contains("visible-flex")) {
     setTimeout(() => {
@@ -112,8 +110,8 @@ function makeLeftHanded() {
 function makeRightHanded() {
   characterFlip.forEach(characterFlip => {
     characterFlip.style.textAlign = "right";
-    rightHandedMode.style.display = "none";
     leftHandedMode.style.display = "block";
+    rightHandedMode.style.display = "none";
     localStorage.setItem("left-handed", "false");
   });
 }
@@ -128,8 +126,8 @@ function showSpan() {
     rightHandedMode.style.display = "block";
     leftHandedMode.style.display = "none";
   } else if (!isLeftHanded) {
-    rightHandedMode.style.display = "block";
-    leftHandedMode.style.display = "none";
+    leftHandedMode.style.display = "block";
+    rightHandedMode.style.display = "none";
   }
 }
 
@@ -142,3 +140,7 @@ function getListOrientation() {
     }
   }
 }
+
+getListOrientation();
+
+// showSpan();
