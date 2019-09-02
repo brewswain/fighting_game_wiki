@@ -273,6 +273,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 60%;
 }
 
 hr {
@@ -401,6 +402,10 @@ table {
   border-right: 1px solid #555555;
 }
 
+.tall-table-cell {
+  height: 250px;
+}
+
 .table-image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,7 +509,7 @@ td {
   }
   .container {
     left: 73vh;
-    width: 40%;
+    width: 50%;
   }
   .combos {
     width: 90%;
@@ -528,7 +533,6 @@ td {
   }
   .container {
     left: 73vh;
-    width: 33%;
   }
   .movelist .character-move {
     display: block;

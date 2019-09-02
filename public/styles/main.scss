@@ -243,6 +243,7 @@ i {
   z-index: -2;
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 hr {
@@ -357,6 +358,9 @@ table {
   flex-direction: column;
   border-right: 1px solid #555555;
 }
+.tall-table-cell {
+  height: 250px;
+}
 
 .table-image {
   display: flex;
@@ -466,7 +470,7 @@ td {
 
   .container {
     left: 73vh;
-    width: 40%;
+    width: 50%;
   }
 
   .combos {
@@ -494,7 +498,7 @@ td {
 
   .container {
     left: 73vh;
-    width: 33%;
+    // width: 33%;
   }
 
   .movelist {
