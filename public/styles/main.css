@@ -27,6 +27,11 @@ h2 {
   padding: 20px 0;
 }
 
+/* just have this for londrekia as he isn't released yet */
+.hide {
+  display: none;
+}
+
 /* Main NavBar styling */
 .navbar {
   display: none;
@@ -404,6 +409,10 @@ table {
 
 .tall-table-cell {
   height: 250px;
+}
+
+.taller-table-cell {
+  height: 350px;
 }
 
 .table-image {
