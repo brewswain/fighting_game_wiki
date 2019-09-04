@@ -450,6 +450,13 @@ td {
   .combo-category {
     font-size: 1.5rem;
   }
+
+  a {
+    border-bottom: #000 1px solid;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
 }
 
 .background-image {
