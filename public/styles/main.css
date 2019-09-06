@@ -412,7 +412,11 @@ table {
 }
 
 .taller-table-cell {
-  max-height: 350px;
+  height: 350px;
+}
+
+.tallest-table-cell {
+  height: 550px;
 }
 
 .table-image {

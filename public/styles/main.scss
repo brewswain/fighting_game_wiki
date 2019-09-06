@@ -366,8 +366,13 @@ table {
 .tall-table-cell {
   height: 250px;
 }
+
 .taller-table-cell {
-  max-height: 350px;
+  height: 350px;
+}
+
+.tallest-table-cell {
+  height: 550px;
 }
 
 .table-image {
@@ -804,10 +809,8 @@ td {
 
   .container {
     left: 0;
-    // margin-top: 13rem;
     width: 100%;
     overflow-x: hidden;
-    // Experimental settings below
     position: relative;
     margin-top: 180vh;
 
