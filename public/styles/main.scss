@@ -248,7 +248,7 @@ i {
   z-index: -2;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50vw;
 }
 
 hr {
@@ -490,7 +490,7 @@ td {
 
   .container {
     left: 73vh;
-    width: 50%;
+    max-width: 40vw;
   }
 
   .combos {
@@ -606,7 +606,7 @@ td {
     -webkit-clip-path: circle(100px at 0% -12%);
 
     transition: all 1s ease-out;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 2;
   }
 

@@ -278,7 +278,7 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
+  width: 50vw;
 }
 
 hr {
@@ -529,7 +529,7 @@ td {
   }
   .container {
     left: 73vh;
-    width: 50%;
+    max-width: 40vw;
   }
   .combos {
     width: 90%;
@@ -623,7 +623,7 @@ td {
     -webkit-clip-path: circle(100px at 0% -12%);
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 2;
   }
   .nav-info.character-open {
