@@ -489,8 +489,8 @@ td {
   }
 
   .container {
-    left: 73vh;
-    max-width: 40vw;
+    left: 74vh;
+    width: 40vw;
   }
 
   .combos {
@@ -633,7 +633,7 @@ td {
     height: 70px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
     top: 0;
-    z-index: 50000000;
+    z-index: 3;
 
     .navigation-button {
       display: block;
@@ -666,7 +666,6 @@ td {
     box-shadow: none;
     text-align: center;
     transition: all 0.8s ease-out;
-    z-index: 2;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
 
     .top-of-page {
@@ -822,13 +821,14 @@ td {
   }
 
   /* Movelist Section */
-  .movelist-header {
-    padding-left: 1rem;
-  }
+  // .movelist-header {
+  //   padding-left: 1rem;
+  // }
   .movelist {
     width: 100%;
-    padding: 0%;
-    overflow-x: scroll;
+    padding: 0;
+    margin: 0 auto;
+    overflow-x: hidden;
 
     .character-move {
       display: block;
@@ -844,6 +844,7 @@ td {
   table {
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
 
     th,
     td {
@@ -866,7 +867,7 @@ td {
 
   .combos {
     overflow-x: hidden;
-    width: 90%;
+    width: 95%;
 
     i {
       right: 5%;
