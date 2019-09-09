@@ -806,11 +806,11 @@ td {
     top: 70px;
   }
   .container {
-    left: 0;
+    left: 2.5%;
     right: 0;
-    width: 100vw;
+    width: 95vw;
     overflow-x: hidden;
-    margin-top: 180vh;
+    margin-top: 50vh;
   }
   .container h1,
   .container h2 {
