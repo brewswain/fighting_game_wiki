@@ -633,7 +633,7 @@ td {
     height: 70px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.17);
     top: 0;
-    z-index: 3;
+    // z-index: 3;
 
     .navigation-button {
       display: block;
@@ -675,8 +675,8 @@ td {
     }
   }
 
-  .right-nav a {
-    z-index: 2;
+  .right-nav {
+    z-index: 50;
   }
 
   .internal-navigation-dropdown {
@@ -808,9 +808,9 @@ td {
 
   .container {
     left: 0;
-    width: 100%;
+    right: 0;
+    width: 100vw;
     overflow-x: hidden;
-    position: relative;
     margin-top: 180vh;
 
     h1,
@@ -844,7 +844,7 @@ td {
   table {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
 
     th,
     td {
@@ -858,7 +858,13 @@ td {
   }
 
   .special-move-table {
-    width: 90%;
+    width: 100%;
+
+    th,
+    td {
+      font-size: 0.75rem;
+      padding: 3px;
+    }
   }
 
   .table-container {
