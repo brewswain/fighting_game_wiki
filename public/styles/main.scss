@@ -440,16 +440,14 @@ td {
   border-radius: 4px;
   line-height: 1.6rem;
   padding: 10px;
-  // position: absolute;
-  // right: 2%;
-  // top: 55%;
 
   h1 {
     font-size: 2.8rem;
     padding: 50px 0 30px;
   }
   li {
-    list-style: none;
+    padding-top: 5px;
+    list-style-type: square;
   }
 
   .combo-category {

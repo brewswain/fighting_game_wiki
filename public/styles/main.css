@@ -493,7 +493,8 @@ td {
 }
 
 .combos li {
-  list-style: none;
+  padding-top: 5px;
+  list-style-type: square;
 }
 
 .combos .combo-category {
