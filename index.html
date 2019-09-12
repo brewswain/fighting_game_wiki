@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fighting Game Knowledgebase</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Neuton&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/../styles/main.css" />
+    <link rel="stylesheet" href="/../styles/index.css" />
+    <script src="https://kit.fontawesome.com/7cafbc0180.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.3.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.3.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.3.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.3.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.3.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <!-- Keeping this here for future plans tm -->
+    <!-- <nav>
+      <ul class="navbar">
+        <a href="/"><li class="nav-item active">Home</li></a>
+        <a href="/bbtag"> <li class="nav-item">BBTAG</li> </a>
+        <a href="/dbfz"> <li class="nav-item">Dragon Ball FighterZ</li> </a>
+        <a href="/ggrev"> <li class="nav-item">Guilty Gear Rev.2</li> </a>
+        <a href="/sfv"> <li class="nav-item">Street Fighter V</li> </a>
+        <a href="/soul_calibur"> <li class="nav-item">Soul Calibur</li> </a>
+        <a href="/tekken"> <li class="nav-item">Tekken</li> </a>
+        <a href="/unist"> <li class="nav-item">UNIST</li> </a>
+      </ul>
+    </nav> -->
+
+    <nav class="nav-info">
+      <div class="character-list">
+        <span class="flip-to-left">Lefty?</span>
+        <span class="flip-to-right">Right Handed?</span>
+        <li class="character-flip">
+          <a href="/characters/unist/Akatsuki/akatsuki.html">Akatsuki</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Byakuya/byakuya.html">Byakuya</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Carmine/carmine.html">Carmine</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Chaos/chaos.html">Chaos</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Eltnum/eltnum.html">Eltnum</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Enkidu/enkidu.html">Enkidu</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Gordeau/gordeau.html">Gordeau</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Hilda/hilda.html">Hilda</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Hyde/hyde.html">Hyde</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Linne/linne.html">Linne</a>
+        </li>
+        <li class="character-flip hide">
+          <a href="/characters/unist/Londrekia/londrekia.html">Londrekia</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Merkava/merkava.html">Merkava</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Mika/mika.html">Mika</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Nanase/nanase.html">Nanase</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Orie/orie.html">Orie</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Phonon/phonon.html">Phonon</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Seth/seth.html">Seth</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Vatista/vatista.html">Vatista</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Wagner/wagner.html">Wagner</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Waldstein/waldstein.html">Waldstein</a>
+        </li>
+        <li class="character-flip">
+          <a href="/characters/unist/Yuzuriha/yuzuriha.html">Yuzuriha</a>
+        </li>
+      </div>
+    </nav>
+
+    <div class="mobile-nav">
+      <i class="fas fa-bars fa-2x  sidebar-icon navigation-button"></i>
+    </div>
+
+    <section class="welcome-banner">
+      <h1>
+        Welcome to the Under Night In-Birth Exe:Late[st] Game Data Thingy!
+      </h1>
+      <h4>
+        For frame data and other good stuff, check the characters below <br />
+        ( •̀ω•́ )σ
+      </h4>
+      <a href="#characters">
+        <span>Character List </span>
+        <i class="fas fa-arrow-down fa-2x"></i
+      ></a>
+      <ul></ul>
+    </section>
+
+    <div class="flex-wrap">
+      <div class="character-container" id="characters">
+        <div class="card top-tile">
+          <a href="/characters/unist/Akatsuki/akatsuki.html">
+            <div class="card-image">
+              <img class="" src="./headshots/akatsuki.png" alt="akatsuki.png" />
+              <div class="card-caption">Akatsuki</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Byakuya/byakuya.html">
+            <div class="card-image">
+              <img class="" src="./headshots/byakuya.png" alt="Byakuya.png" />
+              <div class="card-caption">Byakuya</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Carmine/carmine.html">
+            <div class="card-image">
+              <img class="" src="./headshots/carmine.png" alt="Carmine.png" />
+              <div class="card-caption">Carmine</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Chaos/chaos.html">
+            <div class="card-image">
+              <img class="" src="./headshots/chaos.png" alt="Chaos.png" />
+              <div class="card-caption">Chaos</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Eltnum/cltnum.html">
+            <div class="card-image">
+              <img class="" src="./headshots/eltnum.png" alt="Eltnum.png" />
+              <div class="card-caption">Eltnum</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Enkidu/enkidu.html">
+            <div class="card-image">
+              <img class="" src="./headshots/enkidu.png" alt="Enkidu.png" />
+              <div class="card-caption">Enkidu</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Gordeau/gordeau.html">
+            <div class="card-image">
+              <img class="" src="./headshots/gordeau.png" alt="Gordeau.png" />
+              <div class="card-caption">Gordeau</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Hilda/hilda.html">
+            <div class="card-image">
+              <img class="" src="./headshots/hilda.png" alt="Hilda.png" />
+              <div class="card-caption">Hilda</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Hyde/hyde.html">
+            <div class="card-image">
+              <img class="" src="./headshots/hyde.png" alt="Hyde.png" />
+              <div class="card-caption">Hyde</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Linne/linne.html">
+            <div class="card-image">
+              <img class="" src="./headshots/linne.png" alt="Linne.png" />
+              <div class="card-caption">Linne</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Merkava/merkava.html">
+            <div class="card-image">
+              <img class="" src="./headshots/merkava.png" alt="Merkava.png" />
+              <div class="card-caption">Merkava</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Mika/mika.html">
+            <div class="card-image">
+              <img class="" src="./headshots/mika.png" alt="Mika.png" />
+              <div class="card-caption">Mika</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Nanase/nanase.html">
+            <div class="card-image">
+              <img class="" src="./headshots/nanase.png" alt="Nanase.png" />
+              <div class="card-caption">Nanase</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Orie/orie.html">
+            <div class="card-image">
+              <img class="" src="./headshots/orie.png" alt="Orie.png" />
+              <div class="card-caption">Orie</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Phonon/phonon.html">
+            <div class="card-image">
+              <img class="" src="./headshots/phonon.png" alt="Phonon.png" />
+              <div class="card-caption">Phonon</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Seth/seth.html">
+            <div class="card-image">
+              <img class="" src="./headshots/seth.png" alt="Seth.png" />
+              <div class="card-caption">Seth</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Vatista/vatista.html">
+            <div class="card-image">
+              <img class="" src="./headshots/vatista.png" alt="Vatista.png" />
+              <div class="card-caption">Vatista</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Wagner/wagner.html">
+            <div class="card-image">
+              <img class="" src="./headshots/wagner.png" alt="Wagner.png" />
+              <div class="card-caption">Wagner</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Waldstein/waldstein.html">
+            <div class="card-image">
+              <img
+                class=""
+                src="./headshots/waldstein.png"
+                alt="Waldstein.png"
+              />
+              <div class="card-caption">Waldstein</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/characters/unist/Yuzuriha/yuzuriha.html">
+            <div class="card-image">
+              <img class="" src="./headshots/yuzuriha.png" alt="Yuzuriha.png" />
+              <div class="card-caption">Yuzuriha</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/../scripts/index.js"></script>
+  </body>
+</html>
