@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fighting Game Knowledgebase</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Neuton&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/../styles/main.css" />
     <link rel="stylesheet" href="/../styles/index.css" />
     <script src="https://kit.fontawesome.com/7cafbc0180.js"></script>
@@ -32,22 +37,8 @@
         <a href="/unist"> <li class="nav-item">UNIST</li> </a>
       </ul>
     </nav> -->
-    <div class="welcome-banner">
-      <h3>
-        Welcome to the Under Night In-Birth Exe:Late[st] Frame Data Repository!
-      </h3>
-      <h4>
-        The one stop shop for character info, discord, streams, tutorials, and
-        even match footage ( •̀ω•́ )σ
-      </h4>
-      <ul>
-        <div class="mobile-nav">
-          <i class="fas fa-bars fa-2x  sidebar-icon navigation-button"></i>
-        </div>
-      </ul>
-    </div>
 
-    <div class="nav-info">
+    <nav class="nav-info">
       <div class="character-list">
         <span class="flip-to-left">Lefty?</span>
         <span class="flip-to-right">Right Handed?</span>
@@ -115,25 +106,35 @@
           <a href="/characters/unist/Yuzuriha/yuzuriha.html">Yuzuriha</a>
         </li>
       </div>
+    </nav>
+
+    <div class="mobile-nav">
+      <i class="fas fa-bars fa-2x  sidebar-icon navigation-button"></i>
     </div>
 
-    <!-- <div class="flex-end image-container">
-      <img
-        class="character-select"
-        src="/games/unist/select_screen.jpg"
-        alt="character-select.png"
-      />
-
-    </div> -->
+    <section class="welcome-banner">
+      <h1>
+        Welcome to the Under Night In-Birth Exe:Late[st] Game Data Thingy!
+      </h1>
+      <h4>
+        For frame data and other good stuff, check the characters below <br />
+        ( •̀ω•́ )σ
+      </h4>
+      <a href="#characters">
+        <span>Character List </span>
+        <i class="fas fa-arrow-down fa-2x"></i
+      ></a>
+      <ul></ul>
+    </section>
 
     <div class="flex-wrap">
-      <div class="character-container">
-        <div class="card">
+      <div class="character-container" id="characters">
+        <div class="card top-tile">
           <a href="/characters/unist/Akatsuki/akatsuki.html">
             <div class="card-image">
               <img class="" src="./headshots/akatsuki.png" alt="akatsuki.png" />
+              <div class="card-caption">Akatsuki</div>
             </div>
-            <div class="card-caption">Akatsuki</div>
           </a>
         </div>
 
@@ -141,8 +142,8 @@
           <a href="/characters/unist/Byakuya/byakuya.html">
             <div class="card-image">
               <img class="" src="./headshots/byakuya.png" alt="Byakuya.png" />
+              <div class="card-caption">Byakuya</div>
             </div>
-            <div class="card-caption">Byakuya</div>
           </a>
         </div>
 
@@ -150,8 +151,8 @@
           <a href="/characters/unist/Carmine/carmine.html">
             <div class="card-image">
               <img class="" src="./headshots/carmine.png" alt="Carmine.png" />
+              <div class="card-caption">Carmine</div>
             </div>
-            <div class="card-caption">Carmine</div>
           </a>
         </div>
 
@@ -159,8 +160,8 @@
           <a href="/characters/unist/Chaos/chaos.html">
             <div class="card-image">
               <img class="" src="./headshots/chaos.png" alt="Chaos.png" />
+              <div class="card-caption">Chaos</div>
             </div>
-            <div class="card-caption">Chaos</div>
           </a>
         </div>
 
@@ -168,8 +169,8 @@
           <a href="/characters/unist/Eltnum/cltnum.html">
             <div class="card-image">
               <img class="" src="./headshots/eltnum.png" alt="Eltnum.png" />
+              <div class="card-caption">Eltnum</div>
             </div>
-            <div class="card-caption">Eltnum</div>
           </a>
         </div>
 
@@ -177,8 +178,8 @@
           <a href="/characters/unist/Enkidu/enkidu.html">
             <div class="card-image">
               <img class="" src="./headshots/enkidu.png" alt="Enkidu.png" />
+              <div class="card-caption">Enkidu</div>
             </div>
-            <div class="card-caption">Enkidu</div>
           </a>
         </div>
 
@@ -186,8 +187,8 @@
           <a href="/characters/unist/Gordeau/gordeau.html">
             <div class="card-image">
               <img class="" src="./headshots/gordeau.png" alt="Gordeau.png" />
+              <div class="card-caption">Gordeau</div>
             </div>
-            <div class="card-caption">Gordeau</div>
           </a>
         </div>
 
@@ -195,8 +196,8 @@
           <a href="/characters/unist/Hilda/hilda.html">
             <div class="card-image">
               <img class="" src="./headshots/hilda.png" alt="Hilda.png" />
+              <div class="card-caption">Hilda</div>
             </div>
-            <div class="card-caption">Hilda</div>
           </a>
         </div>
 
@@ -204,8 +205,8 @@
           <a href="/characters/unist/Hyde/hyde.html">
             <div class="card-image">
               <img class="" src="./headshots/hyde.png" alt="Hyde.png" />
+              <div class="card-caption">Hyde</div>
             </div>
-            <div class="card-caption">Hyde</div>
           </a>
         </div>
 
@@ -213,8 +214,8 @@
           <a href="/characters/unist/Linne/linne.html">
             <div class="card-image">
               <img class="" src="./headshots/linne.png" alt="Linne.png" />
+              <div class="card-caption">Linne</div>
             </div>
-            <div class="card-caption">Linne</div>
           </a>
         </div>
 
@@ -222,8 +223,8 @@
           <a href="/characters/unist/Merkava/merkava.html">
             <div class="card-image">
               <img class="" src="./headshots/merkava.png" alt="Merkava.png" />
+              <div class="card-caption">Merkava</div>
             </div>
-            <div class="card-caption">Merkava</div>
           </a>
         </div>
 
@@ -231,8 +232,8 @@
           <a href="/characters/unist/Mika/mika.html">
             <div class="card-image">
               <img class="" src="./headshots/mika.png" alt="Mika.png" />
+              <div class="card-caption">Mika</div>
             </div>
-            <div class="card-caption">Mika</div>
           </a>
         </div>
 
@@ -240,8 +241,8 @@
           <a href="/characters/unist/Nanase/nanase.html">
             <div class="card-image">
               <img class="" src="./headshots/nanase.png" alt="Nanase.png" />
+              <div class="card-caption">Nanase</div>
             </div>
-            <div class="card-caption">Nanase</div>
           </a>
         </div>
 
@@ -249,8 +250,8 @@
           <a href="/characters/unist/Orie/orie.html">
             <div class="card-image">
               <img class="" src="./headshots/orie.png" alt="Orie.png" />
+              <div class="card-caption">Orie</div>
             </div>
-            <div class="card-caption">Orie</div>
           </a>
         </div>
 
@@ -258,8 +259,8 @@
           <a href="/characters/unist/Phonon/phonon.html">
             <div class="card-image">
               <img class="" src="./headshots/phonon.png" alt="Phonon.png" />
+              <div class="card-caption">Phonon</div>
             </div>
-            <div class="card-caption">Phonon</div>
           </a>
         </div>
 
@@ -267,8 +268,8 @@
           <a href="/characters/unist/Seth/seth.html">
             <div class="card-image">
               <img class="" src="./headshots/seth.png" alt="Seth.png" />
+              <div class="card-caption">Seth</div>
             </div>
-            <div class="card-caption">Seth</div>
           </a>
         </div>
 
@@ -276,8 +277,8 @@
           <a href="/characters/unist/Vatista/vatista.html">
             <div class="card-image">
               <img class="" src="./headshots/vatista.png" alt="Vatista.png" />
+              <div class="card-caption">Vatista</div>
             </div>
-            <div class="card-caption">Vatista</div>
           </a>
         </div>
 
@@ -285,8 +286,8 @@
           <a href="/characters/unist/Wagner/wagner.html">
             <div class="card-image">
               <img class="" src="./headshots/wagner.png" alt="Wagner.png" />
+              <div class="card-caption">Wagner</div>
             </div>
-            <div class="card-caption">Wagner</div>
           </a>
         </div>
 
@@ -298,8 +299,8 @@
                 src="./headshots/waldstein.png"
                 alt="Waldstein.png"
               />
+              <div class="card-caption">Waldstein</div>
             </div>
-            <div class="card-caption">Waldstein</div>
           </a>
         </div>
 
@@ -307,8 +308,8 @@
           <a href="/characters/unist/Yuzuriha/yuzuriha.html">
             <div class="card-image">
               <img class="" src="./headshots/yuzuriha.png" alt="Yuzuriha.png" />
+              <div class="card-caption">Yuzuriha</div>
             </div>
-            <div class="card-caption">Yuzuriha</div>
           </a>
         </div>
       </div>

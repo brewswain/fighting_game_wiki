@@ -8,7 +8,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -50,11 +49,6 @@ h2 {
   text-decoration: none;
   font-size: 1.4rem;
   color: whitesmoke;
-}
-
-.active {
-  font-size: 2rem;
-  color: #31ff53;
 }
 
 i {
@@ -360,7 +354,7 @@ hr {
   margin-bottom: 0.4rem;
   border-radius: 4px;
   line-height: 1.6rem;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .movelist .character-move {
@@ -368,10 +362,10 @@ hr {
 }
 
 .movelist a {
-  border-bottom: #000 1px solid;
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: #0880e2;
+  font-size: 1.1rem;
 }
 
 .movelist h1 {

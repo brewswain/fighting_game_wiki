@@ -42,6 +42,10 @@
       {
         "source": "/unist",
         "destination": "/games/unist/unist.html"
+      },
+      {
+        "source": "/characters",
+        "destination": "/characters/"
       }
     ],
     "public": "public",
